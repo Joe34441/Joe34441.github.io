@@ -25,6 +25,22 @@
 			xxsmall:   [null,       '360px'    ]
 		});
 
+	$('.slicky').slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 50000,
+		swipeToSlide: true,
+		slidesToScroll: 1,
+		arrows:true,
+		dots:false
+		
+	});
+	$('.slicky').slickLightbox({
+		itemSelector: 'a',
+		caption:'caption'
+	});
 	/**
 	 * Applies parallax scrolling to an element's background image.
 	 * @return {jQuery} jQuery object.
