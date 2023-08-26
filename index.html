@@ -10,6 +10,36 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css"/>
 		<link rel="stylesheet" type="text/css" href="assets/css/slick-lightbox.css">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<style>
+        	.toggle-buttons-container {
+            	display: flex;
+            	justify-content: space-between;
+				align-items: center; /* flex-end */
+				height: 100%;
+            	margin: 5px 0;
+        	}
+			.toggle-button {
+            background-color: #b9b9b9;
+            color: #ffffff;
+            border: none;
+            padding: 5px 0;
+            flex: 1;
+            text-align: center;
+            border-radius: 10px;
+            cursor: pointer;
+			font-size: 25px;
+			display:flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 10px;
+        	}
+			.toggle-button.active-button:hover,
+        	.toggle-button.active {
+            	background-color: #64ff8b;
+        	}
+		</style>
+
 	</head>
 	<body class="is-preload">
 
@@ -36,10 +66,19 @@
 				<header class="major">
 					<h1>Joe Mason</h1>
 					<p>Games Programming Graduate - University of Gloucestershire</p>
+
+					<p><br /></p>
+					<div class="toggle-buttons-container">
+						<button id="button1" class="toggle-button" onclick="toggleSection('section1', 'button1')">Unity</button>
+						<button id="button2" class="toggle-button" onclick="toggleSection('section2', 'button2')">Unreal Engine</button>
+						<button id="button3" class="toggle-button" onclick="toggleSection('section3', 'button3')">Other</button>
+					</div>
+	
 				</header>
 
+
 				<!-- Content -->
-				<section class="posts">
+				<section class="Unity posts" id="section1">
 					<article>
 						<header>
 							<h2 style="font-size: xx-large;">Wave Function Collapse</h2>
@@ -80,26 +119,6 @@
 							accompanying effects created with HLSL and the VFX graph to
 							create the ocean storm diorama.
 							<br><a href="https://github.com/Joe34441/Ocean-Storm-Shader">Project</a>
-						</p>
-					</article>
-					
-					<article>
-						<header>
-							<h2 style="font-size: xx-large;">Dungeon Level</h2>
-						</header>
-						<div class="slicky">
-							<a href="bigimages/ue4dungeon/img1.png" data-caption="Main Room"><img src="images/ue4dungeon/img1.png" /></a>
-							<a href="bigimages/ue4dungeon/img2.png" data-caption="Tile Puzzles"><img src="images/ue4dungeon/img2.png" /></a>
-							<a href="bigimages/ue4dungeon/img3.png" data-caption="Swinging Axe Traps"><img src="images/ue4dungeon/img3.png" /></a>
-							<a href="bigimages/ue4dungeon/img4.png" data-caption="Pillar Puzzles"><img src="images/ue4dungeon/img4.png" /></a>
-						</div>
-						<p style="font-size: large; text-align: left;">
-							A dungeon level whitebox created in Unreal Engine 4.
-							Uses C++ and blueprints for puzzles, traps and other
-							features. Level content and flow inspired by The Elder
-							Scrolls 5: Skyrim, with the aesthetic and atmosphere
-							being inspired by Resident Evil Village.
-							<br><a href="https://github.com/Joe34441/UE4-Dungeon-Level">Project</a>
 						</p>
 					</article>
 					
@@ -170,29 +189,6 @@
 							<br><a href="https://github.com/Joe34441/Fighting-Fire">Project</a>
 						</p>
 					</article>
-
-					<article>
-						<header>
-							<h2 style="font-size: xx-large;">^^^^^^</h2>
-						</header>
-						<div class="slicky">
-							<a href="bigimages/^^^^^^/titlepage1.png" data-caption="Title Page"><img src="images/^^^^^^/titlepage1.png" /></a>
-							<a href="bigimages/^^^^^^/titlepage2.png" data-caption="Title Page"><img src="images/^^^^^^/titlepage2.png" /></a>
-							<a href="bigimages/^^^^^^/gameplay1.png" data-caption="Level 1-1"><img src="images/^^^^^^/gameplay1.png" /></a>
-							<a href="bigimages/^^^^^^/gameplay2.png" data-caption="Level 1-2"><img src="images/^^^^^^/gameplay2.png" /></a>
-							<a href="bigimages/^^^^^^/gameplay3.png" data-caption="Level 1-3"><img src="images/^^^^^^/gameplay3.png" /></a>
-							<a href="bigimages/^^^^^^/gameplay4.png" data-caption="Level 1-3"><img src="images/^^^^^^/gameplay4.png" /></a>
-							<a href="bigimages/^^^^^^/gameplay5.png" data-caption="Level 1-4"><img src="images/^^^^^^/gameplay5.png" /></a>
-						</div>
-						<p style="font-size: large; text-align: left;">
-							^^^^^^ is a homage to the retro game vvvvvv. Made in 
-							C++ with no game engine, a self-made framework and 
-							the SDL library. As such, I also produced manager 
-							classes for animation, audio and level/scene changing
-							so that all necessary game features were present.
-							<br><a href="https://github.com/Joe34441/Retrogame">Project</a>
-						</p>
-					</article>
 					
 					<article>
 						<header>
@@ -218,6 +214,76 @@
 					</article>
 
 				</section>
+
+				<section class="UnrealEngine posts" id="section2">
+					<article>
+						<header>
+							<h2 style="font-size: xx-large;">Dungeon Level</h2>
+						</header>
+						<div class="slicky">
+							<a href="bigimages/ue4dungeon/img1.png" data-caption="Main Room"><img src="images/ue4dungeon/img1.png" /></a>
+							<a href="bigimages/ue4dungeon/img2.png" data-caption="Tile Puzzles"><img src="images/ue4dungeon/img2.png" /></a>
+							<a href="bigimages/ue4dungeon/img3.png" data-caption="Swinging Axe Traps"><img src="images/ue4dungeon/img3.png" /></a>
+							<a href="bigimages/ue4dungeon/img4.png" data-caption="Pillar Puzzles"><img src="images/ue4dungeon/img4.png" /></a>
+						</div>
+						<p style="font-size: large; text-align: left;">
+							A dungeon level whitebox created in Unreal Engine 4.
+							Uses a mixture of C++ and blueprints to create a
+							variety of puzzles, traps and other features.
+							Incorporates game design techniques to improve pacing
+							and subtly help guide the player through the dungeon.
+							The level's content and flow is inspired by The Elder
+							Scrolls 5: Skyrim, with the aesthetic and atmosphere
+							being inspired by Resident Evil Village.
+							<br><a href="https://github.com/Joe34441/UE4-Dungeon-Level">Project</a>
+						</p>
+					</article>
+
+					<article>
+						<header>
+							<h2 style="font-size: xx-large;">Terrain Generator [WIP]</h2>
+						</header>
+						<div class="slicky">
+							<a href="bigimages/ue4dungeon/img1.png" data-caption="temp"><img src="images/ue4dungeon/img1.png" /></a>
+						</div>
+						<p style="font-size: large; text-align: left;">
+							A terrain generator created in Unreal Engine 4 with
+							C++. Combines multiple instances of noise maps to
+							allow the creation of a wide variety of landscape
+							patterns according to user input. The generator
+							dynamically constructs and renders meshes in chunks,
+							for which I have implemented mesh simplification and
+							edge smoothing techniques to allow for faster
+							generation with seamless chunk borders.
+							<br><a href="https://github.com">Project</a>
+						</p>
+					</article>
+				</section>
+
+				<section class="Other posts " id="section3">
+					<article>
+						<header>
+							<h2 style="font-size: xx-large;">^^^^^^</h2>
+						</header>
+						<div class="slicky">
+							<a href="bigimages/^^^^^^/titlepage1.png" data-caption="Title Page"><img src="images/^^^^^^/titlepage1.png" /></a>
+							<a href="bigimages/^^^^^^/titlepage2.png" data-caption="Title Page"><img src="images/^^^^^^/titlepage2.png" /></a>
+							<a href="bigimages/^^^^^^/gameplay1.png" data-caption="Level 1-1"><img src="images/^^^^^^/gameplay1.png" /></a>
+							<a href="bigimages/^^^^^^/gameplay2.png" data-caption="Level 1-2"><img src="images/^^^^^^/gameplay2.png" /></a>
+							<a href="bigimages/^^^^^^/gameplay3.png" data-caption="Level 1-3"><img src="images/^^^^^^/gameplay3.png" /></a>
+							<a href="bigimages/^^^^^^/gameplay4.png" data-caption="Level 1-3"><img src="images/^^^^^^/gameplay4.png" /></a>
+							<a href="bigimages/^^^^^^/gameplay5.png" data-caption="Level 1-4"><img src="images/^^^^^^/gameplay5.png" /></a>
+						</div>
+						<p style="font-size: large; text-align: left;">
+							^^^^^^ is a homage to the retro game vvvvvv. Made in 
+							C++ with no game engine, a self-made framework and 
+							the SDL library. As such, I also produced manager 
+							classes for animation, audio and level/scene changing
+							so that all necessary game features were present.
+							<br><a href="https://github.com/Joe34441/Retrogame">Project</a>
+						</p>
+					</article>
+				</section>
 			</div>
 
 			<!-- Spacing -->
@@ -226,6 +292,38 @@
 		</div>
 
 		<!-- Scripts -->
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+            	toggleSection('section1', 'button1');
+				//setTimeout(function() { toggleSection('section1', 'button1'); }, 250);
+        	});
+
+			var lastButton;
+
+			function toggleSection(sectionID, buttonID)
+			{
+				var sections = document.querySelectorAll('.posts');
+    			var sectionToShow = document.getElementById(sectionID);
+    			sections.forEach(function(section)
+				{
+        			section.style.display = 'none';
+    			});
+    			sectionToShow.style.display = 'flex';
+    
+    			if (lastButton)
+				{
+        			lastButton.style.backgroundColor = '#d6d6d6';
+        			lastButton.style.borderColor = '#d6d6d6';
+    			}
+    
+    			var currentButton = document.getElementById(buttonID);
+    			currentButton.style.backgroundColor = '#64ff8b';
+    			currentButton.style.borderColor = '#64ff8b';
+    
+    			lastButton = currentButton;
+			}
+		</script>
+
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/jquery.scrollex.min.js"></script>
 		<script src="assets/js/jquery.scrolly.min.js"></script>
